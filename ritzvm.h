@@ -12,6 +12,9 @@
 // Find : https://youtu.be/0OcmaLP-tT8?si=4yxgNJQLJqfLBtYd
 #include <birchutils.h>
 
+// We are thinking of errors as zero-work done.
+#define ErrMem 0x01
+
 // Aliased types for ease of handling
 typedef unsigned char int8;
 typedef unsigned short int int16;
@@ -131,4 +134,6 @@ static IM instrmap[] = {
 
 };
 
+/* Constructor function for creation a virtual machine */
+VM *virtualMachine(Program*, int16);
 int main(int, char**);
